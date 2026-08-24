@@ -1,1 +1,37 @@
-{"cleanUrls":true,"trailingSlash":false,"outputDirectory":".","headers":[{"source":"/(.*)", "headers":[{"key":"Cache-Control","value":"public, max-age=0, must-revalidate"}]},{"source":"/(.*)\\.css","headers":[{"key":"Cache-Control","value":"public, max-age=60"}]},{"source":"/(.*)\\.(js|jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf|eot|ico|mp4)","headers":[{"key":"Cache-Control","value":"public, max-age=3600, stale-while-revalidate=86400"}]}]}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/shop", "destination": "https://shopviejocreekoutdoors.com/shop/?orderby=menu_order", "permanent": false },
+    { "source": "/shop/:path*", "destination": "https://shopviejocreekoutdoors.com/shop/?orderby=menu_order", "permanent": false },
+
+    { "source": "/product", "destination": "https://shopviejocreekoutdoors.com/shop/?orderby=menu_order", "permanent": false },
+    { "source": "/product/:slug/index.html", "destination": "https://shopviejocreekoutdoors.com/product/:slug/", "permanent": false },
+    { "source": "/product/:path*", "destination": "https://shopviejocreekoutdoors.com/product/:path*/", "permanent": false },
+
+    { "source": "/product-category", "destination": "https://shopviejocreekoutdoors.com/shop/?orderby=menu_order", "permanent": false },
+    { "source": "/product-category/:slug/index.html", "destination": "https://shopviejocreekoutdoors.com/product-category/:slug/", "permanent": false },
+    { "source": "/product-category/:slug/page/:n/index.html", "destination": "https://shopviejocreekoutdoors.com/product-category/:slug/page/:n/", "permanent": false },
+    { "source": "/product-category/:path*", "destination": "https://shopviejocreekoutdoors.com/product-category/:path*/", "permanent": false },
+
+    { "source": "/size", "destination": "https://shopviejocreekoutdoors.com/shop/?orderby=menu_order", "permanent": false },
+    { "source": "/size/:slug/index.html", "destination": "https://shopviejocreekoutdoors.com/size/:slug/", "permanent": false },
+    { "source": "/size/:slug/page/:n/index.html", "destination": "https://shopviejocreekoutdoors.com/size/:slug/page/:n/", "permanent": false },
+    { "source": "/size/:path*", "destination": "https://shopviejocreekoutdoors.com/size/:path*/", "permanent": false },
+
+    { "source": "/cart", "destination": "https://shopviejocreekoutdoors.com/cart/", "permanent": false },
+    { "source": "/cart/:path*", "destination": "https://shopviejocreekoutdoors.com/cart/", "permanent": false },
+
+    { "source": "/checkout", "destination": "https://shopviejocreekoutdoors.com/checkout/", "permanent": false },
+    { "source": "/checkout/:path*", "destination": "https://shopviejocreekoutdoors.com/checkout/", "permanent": false },
+
+    { "source": "/my-account", "destination": "https://shopviejocreekoutdoors.com/my-account/", "permanent": false },
+    { "source": "/my-account/:path*", "destination": "https://shopviejocreekoutdoors.com/my-account/", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
+    { "source": "/(.*)\\.css", "headers": [{ "key": "Cache-Control", "value": "public, max-age=60" }] },
+    { "source": "/(.*)\\.(js|jpg|jpeg|png|gif|webp|svg|woff|woff2|ttf|eot|ico|mp4)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }] }
+  ]
+}
